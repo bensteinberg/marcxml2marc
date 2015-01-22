@@ -12,4 +12,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 foreman start
 ```
-The application should now be running at http://localhost:5000/.
+The application should now be running at http://localhost:5000/
