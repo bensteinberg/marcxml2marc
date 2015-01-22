@@ -1,0 +1,24 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/fixes.html" as fixes %}
+
+{% block title %}Upload form{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <h1>MARC-XML to MARC Converter</h1>
+      <p>
+	Upload one or more MARC-XML files here, and get back a single MARC file.
+      </p>
+      <form action="" method=post enctype=multipart/form-data>
+	<p><input type=file name="file" multiple></p>
+	<p>Output filename: <input type=text name="name" value="{{ n }}"></p>
+	<p><input type=submit value="Upload & convert"></p>
+      </form> 
+    </div>
+{% endblock %}
+
+{% block head %}
+{{super()}}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+{{fixes.ie8()}}
+{% endblock %}
