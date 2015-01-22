@@ -7,7 +7,7 @@ You need virtualenv and pip, and foreman, from the [Heroku toolbelt](https://too
 ```
 git clone https://github.com/bensteinberg/marcxml2marc.git
 cd marcxml2marc
-virtualenv-2.7 venv
+virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
 foreman start
