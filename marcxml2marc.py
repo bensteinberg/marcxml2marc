@@ -23,7 +23,10 @@ def convert():
                     writer.write(record)
                 remove(filepath)
             strIO.seek(0)
-            filename = request.form['name'] if request.form['name'] else "output.mrc"
+            try:
+                filename = request.form['name']
+            except:
+                filename = "output.mrc"
             return send_file(strIO, attachment_filename=filename, as_attachment=True)
     return render_template("upload.html", n = "etd_hua_%s.mrc" % date.today().strftime("%Y%m%d"))
 
